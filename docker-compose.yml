@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: thomas_portfolio_db
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - portfolio_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: thomas_portfolio_backend
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_URL: mongodb://admin:password@mongodb:27017/?authSource=admin
+      DB_NAME: thomas_portfolio
+      CORS_ORIGINS: http://localhost:3000,http://localhost:5173
+    depends_on:
+      - mongodb
+    networks:
+      - portfolio_network
+    command: uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_BACKEND_URL: http://localhost:8000
+    container_name: thomas_portfolio_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - portfolio_network
+
+volumes:
+  mongo_data:
+
+networks:
+  portfolio_network:
+    driver: bridge

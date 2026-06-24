@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "env": [
+    {
+      "key": "REACT_APP_BACKEND_URL",
+      "value": "https://your-backend-url.onrender.com"
+    }
+  ]
+}
