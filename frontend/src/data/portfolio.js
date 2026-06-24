@@ -5,7 +5,8 @@ export const profile = {
   phone: "+91 7208787842",
   github: "https://github.com/10132003",
   linkedin: "https://linkedin.com/in/thomasm-tech",
-  leetcode: "https://leetcode.com/u/thomasm-tech",
+  leetcode: "https://leetcode.com/u/thomasmicheal9601/",
+
   resume: "/thomas-m-resume.pdf",
   roles: [
     "Backend Developer",
