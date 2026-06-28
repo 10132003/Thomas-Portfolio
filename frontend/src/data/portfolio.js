@@ -117,6 +117,44 @@ export const projects = [
     github: "https://github.com/10132003/TravelAssistApp",
     accent: "#00CC66",
   },
+  {
+    id: "airline",
+    name: "AirlineReservationSystem",
+    badge: "BACKEND",
+    short:
+      "Enterprise-grade airline reservation backend with end-to-end booking, payment, and ticketing workflows.",
+    description:
+      "AirlineReservationSystem is a production-quality REST API backend that models the complete lifecycle of an airline operation — from fleet and airport management to passenger booking, seat allocation, payment processing, ticket generation, and real-time notifications. Built with a clean modular architecture using Spring Boot, Spring Security, and MySQL.",
+    features: [
+      "Complete booking workflow: seat selection → payment → ticket generation",
+      "10+ domain modules: Aircraft, Airport, Flight, FlightSeat, Booking, Passenger, Payment, Ticket, Notification, Dashboard",
+      "Role-based access control via Spring Security",
+      "OpenAPI / Swagger UI documentation via springdoc-openapi",
+      "Enum-driven status tracking (BookingStatus, PaymentStatus, FlightStatus, TicketStatus, etc.)",
+      "Global exception handling with domain-specific custom exceptions",
+      "Real-time notification system with NotificationType enums",
+      "Admin dashboard endpoint with aggregated operational metrics",
+    ],
+    architecture: [
+      "Client / Swagger UI",
+      "Spring Security (Role-Based Auth)",
+      "REST Controllers (10+ modules)",
+      "Service Layer (Business Logic)",
+      "JPA Repositories",
+      "MySQL Database",
+      "Notification Engine",
+      "Global Exception Handler",
+    ],
+    highlights: [
+      "End-to-End Booking Workflow",
+      "10+ Domain Modules",
+      "OpenAPI Documentation",
+      "Role-Based Security",
+    ],
+    tech: ["Java", "Spring Boot", "Spring Security", "JPA", "Hibernate", "MySQL", "Lombok", "Maven"],
+    github: "https://github.com/10132003/airline-reservation-system",
+    accent: "#00CC66",
+  },
 ];
 
 export const experience = [
