@@ -20,18 +20,18 @@ export const profile = {
 
 export const aboutEducation = [
   {
+    degree: "M.Tech, Communication and Signal Processing",
+    school: "Indian Institute of Technology (ISM) Dhanbad",
+    detail: "Pursuing",
+    period: "2026 – 2028",
+    location: "Dhanbad, Jharkhand",
+  },
+  {
     degree: "B.E. Computer Science and Engineering",
     school: "Sri Sairam Institute of Technology",
     detail: "CGPA 8.53 / 10",
     period: "2022 – 2026",
     location: "Chennai, Tamil Nadu",
-  },
-  {
-    degree: "M.Tech, Operations Research",
-    school: "National Institute of Technology Durgapur",
-    detail: "Pursuing",
-    period: "2026 – 2028",
-    location: "Durgapur, West Bengal",
   },
 ];
 
